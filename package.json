@@ -1,0 +1,22 @@
+{
+  "name": "bench-grpc-stream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start:server": "tsc && node dist/server.js",
+    "start:client": "tsc && node dist/client.js",
+    "proto:gen": "grpc_tools_node_protoc --ts_proto_out=./src/compiled_proto --ts_proto_opt=outputServices=nice-grpc,outputServices=generic-definitions,useExactTypes=false --proto_path=./src/proto data.proto"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^24.2.0",
+    "typescript": "^5.9.2"
+  }
+}

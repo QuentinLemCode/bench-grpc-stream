@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package data;
+
+message DataChunk {
+  bytes data = 1;
+  uint32 count = 2;
+}
+
+message GetDataRequest {}
+
+service DataService {
+  rpc GetData(GetDataRequest) returns (stream DataChunk);
+}
